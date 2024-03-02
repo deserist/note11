@@ -167,32 +167,77 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="clear"></div>
-                                        <div class="card">
-                                            <div class="section-hero">
-                                                Kredi/Banka Kartı ile Ödemeler Şuanda Kapalıdır.
-                                            </div>
+                                       <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Havale/Eft Bilgileri</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
 
-                                            <div class="card-information">
-                                                <div class="title">
-                                                    Havale/Eft Hesap Bilgileri
-                                                </div>
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
 
-                                                <div class="form-area js-new-creditcard-area">
-                                                    <div class="field">
-                                                        <label>
-                                                            Muhasebe Alıcı Ad Soyad:<br><br><br>
-                                                            Serhat TEZEL
-                                                        </label>
-                                                    </div>
+        .bilgi-kutu {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
 
-                                                    <div class="field">
-                                                        <label>
-                                                            IBAN:<br><br>
+        .metin {
+            flex-grow: 1;
+            margin: 0;
+        }
 
-                                                            TR41 0004 6004 5688 8000 2892 33
-                                                        </label>
-                                                    </div>
+        .kopyala-dugme {
+            padding: 8px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+ HESAP BiLGiLERi
+    <div class="container">
+        <div class="bilgi-kutu">
+            <p class="metin">Muhasebe Alıcı Ad Soyad: Serhat TEZEL</p>
+            <button class="kopyala-dugme" onclick="kopyala('Serhat TEZEL')">Kopyala</button>
+        </div>
+
+        <div class="bilgi-kutu">
+            <p class="metin">IBAN: TR41 0004 6004 5688 8000 2892 33</p>
+            <button class="kopyala-dugme" onclick="kopyala('TR41 0004 6004 5688 8000 2892 33')">Kopyala</button>
+        </div>
+    </div>
+
+    <script>
+        function kopyala(text) {
+            var textarea = document.createElement('textarea');
+            textarea.value = text;
+            document.body.appendChild(textarea);
+            textarea.select();
+            document.execCommand('copy');
+            document.body.removeChild(textarea);
+            alert('Bilgi kopyalandı: ' + text);
+        }
+    </script>
 
                                                     
                                                         
